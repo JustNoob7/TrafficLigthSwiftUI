@@ -7,67 +7,65 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 struct ContentView: View {
     
-    private let fullOpacity = 1.0
-    private let weakOpacity = 0.3
-    
     @State private var buttonText = "START"
-    @State private var redCircle = CircleView(color: .red, opacity: 0.3)
-    @State private var yellowCircle = CircleView(color: .yellow, opacity: 0.3)
-    @State private var greenCircle = CircleView(color: .green, opacity: 0.3)
+    
+    @State private var redLightState = 0.3
+    @State private var yellowLightState = 0.3
+    @State private var greenLightState = 0.3
+    
+    @State private var currentLight = CurrentLight.red
     
     var body: some View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
-            VStack {
-                redCircle
-                    .padding(.bottom, 10.0)
-                yellowCircle
-                    .padding(.bottom, 10.0)
-                greenCircle
+            VStack(spacing: 15) {
+                CircleView(color: .red, opacity: redLightState)
+                CircleView(color: .yellow, opacity: yellowLightState)
+                CircleView(color: .green, opacity: greenLightState)
                 
                 Spacer()
                 
-                Button {
-                    changeColor()
-                } label: {
-                    Text(buttonText)
-                        .font(.largeTitle)
-                }
-                .frame(width: 150, height: 50)
-                .background(Color.white)
-                .cornerRadius(10)
+                ChangeColorButton(title: buttonText,
+                                  action: changeColor)
             }
-            .padding(.bottom)
-            .padding(.top)
+            .padding()
         }
     }
     
     private func changeColor() {
+        let lightIsOn = 1.0
+        let lightIsOff = 0.3
+        
         if buttonText == "START" {
             buttonText = "NEXT"
         }
         
-        switch redCircle.opacity {
-        case yellowCircle.opacity:
-            redCircle.opacity = fullOpacity
-            greenCircle.opacity = weakOpacity
-        case greenCircle.opacity:
-            greenCircle.opacity = fullOpacity
-            yellowCircle.opacity = weakOpacity
+        switch currentLight {
+        case .red:
+            currentLight = .yellow
+            redLightState = lightIsOn
+            greenLightState = lightIsOff
+        case .yellow:
+            currentLight = . green
+            yellowLightState = lightIsOn
+            redLightState = lightIsOff
         default:
-            yellowCircle.opacity = fullOpacity
-            redCircle.opacity = weakOpacity
+            currentLight = .red
+            greenLightState = lightIsOn
+            yellowLightState = lightIsOff
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-        }
+        ContentView()
     }
 }

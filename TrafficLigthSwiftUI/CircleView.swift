@@ -22,6 +22,6 @@ struct CircleView: View {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(color: .blue, opacity: 1)
+        CircleView(color: .red, opacity: 1)
     }
 }

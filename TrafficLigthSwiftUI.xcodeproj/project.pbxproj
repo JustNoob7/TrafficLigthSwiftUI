@@ -12,6 +12,7 @@
 		531A678327285C7C00948F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531A678227285C7C00948F21 /* Assets.xcassets */; };
 		531A678627285C7C00948F21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531A678527285C7C00948F21 /* Preview Assets.xcassets */; };
 		531A678D27285CDD00948F21 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A678C27285CDD00948F21 /* CircleView.swift */; };
+		531A67AF272C1B7100948F21 /* ChangeColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A67AE272C1B7100948F21 /* ChangeColorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		531A678227285C7C00948F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		531A678527285C7C00948F21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		531A678C27285CDD00948F21 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		531A67AE272C1B7100948F21 /* ChangeColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				531A677E27285C7B00948F21 /* TrafficLigthSwiftUIApp.swift */,
 				531A678027285C7B00948F21 /* ContentView.swift */,
+				531A67AE272C1B7100948F21 /* ChangeColorButton.swift */,
 				531A678C27285CDD00948F21 /* CircleView.swift */,
 				531A678227285C7C00948F21 /* Assets.xcassets */,
 				531A678427285C7C00948F21 /* Preview Content */,
@@ -143,6 +146,7 @@
 				531A678D27285CDD00948F21 /* CircleView.swift in Sources */,
 				531A678127285C7B00948F21 /* ContentView.swift in Sources */,
 				531A677F27285C7B00948F21 /* TrafficLigthSwiftUIApp.swift in Sources */,
+				531A67AF272C1B7100948F21 /* ChangeColorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
